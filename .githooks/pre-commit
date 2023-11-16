@@ -1,8 +1,9 @@
 #!/bin/sh
-# Custom generated
-echo "testing";
-
-
+# Custom
+tox -c tox.ini --root components/component1/
+tox -c tox.ini --root components/component2/
+tox -c tox.ini --root components/component3/
+tox -c tox.ini --root components/component4/
 # Auto generated
 if git rev-parse --verify HEAD >/dev/null 2>&1
 then
