@@ -1,4 +1,8 @@
 #!/bin/sh
+# Custom generated
+echo "testing";
+
+# Auto generated
 if git rev-parse --verify HEAD >/dev/null 2>&1
 then
         against=HEAD
@@ -9,7 +13,6 @@ fi
 
 # If you want to allow non-ASCII filenames set this variable to true.
 allownonascii=$(git config --type=bool hooks.allownonascii)
-
 
 # Redirect output to stderr.
 exec 1>&2
