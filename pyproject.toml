@@ -1,15 +1,21 @@
-[build-system]
-requires = ["setuptools>=42.0", "wheel"]
-build-backend = "setuptools.build_meta"
+[project]
+name = "template-project"
+version = "1.0.0"
+description = "A template project for a monorepo"
+readme = "README.md"
+requires-python = ">=3.10"
 
 [tool.pytest.ini_options]
-addopts = "--cov=slapping"
+addopts = "--cov=. --cov-config=../../tox.ini"
 testpaths = [
     "tests",
 ]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration (deselect with '-m \"not integration\"')",
+]
 
 [tool.mypy]
-mypy_path = "src"
 check_untyped_defs = true
 disallow_any_generics = true
 ignore_missing_imports = true
@@ -21,3 +27,10 @@ warn_return_any = true
 warn_unreachable = true
 warn_unused_configs = true
 no_implicit_reexport = true
+
+[tool.ruff]
+line-length = 88
+exclude = ["tests"]
+
+[tool.ruff.format]
+indent-style = "space"
