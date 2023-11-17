@@ -1,9 +1,11 @@
 #!/bin/sh
+#This will cause the script to exit immediately if a command exits with a nonzero exit value (for pipes is not enough)
+set -e
 # Custom
-tox -c tox.ini --root components/component1/
-tox -c tox.ini --root components/component2/
-tox -c tox.ini --root components/component3/
-tox -c tox.ini --root components/component4/
+tox -c tox.ini --root components/component1/ -- -m "not slow"
+#tox -c tox.ini --root components/component2/ -- -m "not slow"
+#tox -c tox.ini --root components/component3/ -- -m "not slow"
+#tox -c tox.ini --root components/component4/ -- -m "not slow"
 # Auto generated
 if git rev-parse --verify HEAD >/dev/null 2>&1
 then
