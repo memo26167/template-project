@@ -4,7 +4,7 @@
 set -e
 echo "Running pre-commit hook"
 # Custom
-#tox -c tox.ini --root components/component1/ -- -m "not slow"
-#tox -c tox.ini --root components/component2/ -- -m "not slow"
-#tox -c tox.ini --root components/component3/ -- -m "not slow"
-#tox -c tox.ini --root components/component4/ -- -m "not slow"
+tox -c tox.ini --root components/component1/ -- -m "not slow"
+tox -c tox.ini --root components/component2/ -- -m "not slow"
+tox -c tox.ini --root components/component3/ -- -m "not slow"
+tox -c tox.ini --root components/component4/ -- -m "not slow"
