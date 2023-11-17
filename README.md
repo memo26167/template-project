@@ -1,4 +1,4 @@
-# StarterProject
-A starter project to show how to set up and use automated testing in Python
+# Template Project
+A template project to show how to set up and use automated testing in Python
 
-![Tests](https://github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject/actions/workflows/tests.yml/badge.svg)
+![Tests](https://github.com/memo26167/template-project/actions/workflows/tests.yml/badge.svg)
