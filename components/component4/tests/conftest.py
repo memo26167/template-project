@@ -10,8 +10,8 @@ def container_fixture():
     This fixture starts redis container
     '''
     print("This is setup")
-    client = docker.DockerClient("unix:///home/memo/.docker/desktop/docker.sock")
-    #client = docker.from_env()
+    #client = docker.DockerClient("unix:///home/memo/.docker/desktop/docker.sock")
+    client = docker.from_env()
     container = client.containers.run(
         image="redis",
         auto_remove=True,
