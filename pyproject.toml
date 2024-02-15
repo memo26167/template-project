@@ -28,9 +28,5 @@ warn_unreachable = true
 warn_unused_configs = true
 no_implicit_reexport = true
 
-[tool.ruff]
-line-length = 88
-exclude = ["tests"]
-
-[tool.ruff.format]
-indent-style = "space"
+#[tool.ruff]
+#exclude = ["tests"]

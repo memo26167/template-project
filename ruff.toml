@@ -1,0 +1,117 @@
+# ------------------------------------------------------------------------------
+# Rules
+# ------------------------------------------------------------------------------
+# Notes:
+# Refurb (FURB) Rules wasn't reviewed.
+# Flake8-Bandit (S) Rules wasn't reviewed.
+# Flake8-DJango (DJ) Rules wasn't reviewed.
+# Flake8-Logging (LOG) Rules wasn't reviewed.
+# Flake8-gettext (INT) Rules were accepted but not used.
+# Last reviewed: 2024/01/16
+# ------------------------------------------------------------------------------
+lint.select = [
+    # Complete sets
+    "F", "W", "C90", "I", "N", "D", "UP",
+    "YTT", "ASYNC", "BLE", "B", "A", "C4",
+    "DTZ", "T10", "EM", "EXE", "FA", "ISC",
+    "ICN", "G", "INP", "PIE", "T20", "PYI",
+    "PT", "Q", "RSE", "RET", "SLF", "SLOT",
+    "SIM", "ARG", "TCH", "TD", "FIX", "ERA",
+    "PD", "PGH", "TRY", "FLY", "NPY", "AIR",
+    "PERF", "RUF",
+    
+    # Specific rules
+    "E101", "E401", "E402", "E501", "E702",
+    "E703", "E711", "E712", "E713", "E714",
+    "E721", "E722", "E731", "E902", "E999",
+    "ANN001", "ANN201", "ANN202", "ANN205",
+    "ANN206",
+    "FBT003",
+    "COM818", "COM819",
+    "TID252"
+    ]
+
+# Extension rules
+lint.extend-select = [
+    "D212", "D417"
+    ]
+
+# Remove rules
+lint.ignore = [
+    "N802", "N804", 
+    "UP040", 
+    "B905", 
+    "PT003",
+    "TRY002", "TRY003",
+    "PLR0915", "PLR0917", "PLW1514"
+    ]
+
+
+# ------------------------------------------------------------------------------
+# Lint Configuration
+# ------------------------------------------------------------------------------
+# ------------------
+# pyCodeStyle (E, W)
+# ------------------
+[lint.pycodestyle]
+max-doc-length = 75
+max-line-length = 80
+
+# ------------
+# McCabe (C90)
+# ------------
+[lint.mccabe]
+max-complexity = 2
+
+# --------------
+# pyDocStyle (D)
+# --------------
+[lint.pydocstyle]
+convention = "numpy"
+
+# ---------
+# iSort (I)
+# ---------
+[lint.isort]
+from-first = true
+no-sections = false
+order-by-type = true
+lines-after-imports = 2
+section-order = [
+    "future", "standard-library", "third-party", "first-party", "local-folder"
+    ]
+
+# ------------------------
+# Flake8 PyTest Style (PT)
+# ------------------------
+[lint.flake8-pytest-style]
+mark-parentheses = true
+fixture-parentheses = true
+parametrize-names-type = "tuple"
+parametrize-values-type = "list"
+parametrize-values-row-type = "tuple"
+
+# -----------------
+# Flake8 Quotes (Q)
+# -----------------
+[lint.flake8-quotes]
+inline-quotes = "single"
+multiline-quotes = "double"
+docstring-quotes = "double"
+
+# -------------------
+# Flake8 Tidy Imports
+# -------------------
+[lint.flake8-tidy-imports]
+ban-relative-imports = "all"
+
+# -------------------
+# PyLint
+# -------------------
+[lint.pylint]
+max-public-methods = 10
+max-returns = 4
+max-branches = 4
+max-args = 7
+max-locals = 30
+max-bool-expr = 5

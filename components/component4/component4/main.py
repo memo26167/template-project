@@ -5,12 +5,25 @@
 
 
 def component4_function(x: str) -> str:
-    """Funcion component4.
+    """Implement function component4.
 
-    A function
-        x: int
+    A description of the function component4.
+
+    Parameters
+    ----------
+    x : `str`
+        Description of parameter `x`.
+
+    Returns
+    -------
+    `str`
+        Description of the return value.
+
+    Notes
+    -----
+    This is the fourth component function that will be evaluated.
     """
     return x.upper()
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     pass
